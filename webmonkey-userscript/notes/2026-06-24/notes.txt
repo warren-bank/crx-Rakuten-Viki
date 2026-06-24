@@ -1,0 +1,137 @@
+--------------------------------------------------------------------------------
+
+https://www.viki.com/tv/39255c-three-bod#episodes
+  series: Three-Body
+
+https://www.viki.com/videos/1211477v-three-body-episode-1
+  episode: Three-Body S01E01
+
+--------------------------------------------------------------------------------
+
+view-source:https://www.viki.com/videos/1211477v-three-body-episode-1
+
+strings to extract:
+===================
+
+{"type":"video","url":"https://manifest-viki.viki.io/v1/1211477v/cloudfront/main/mpd/vtt/viki/high/sd/ww/dt2_dt3/manifest.mpd?h_host=playback-streams-687bf7b8b6-xkw97\u0026h_timestamp=1782293463\u0026tag=mpdhd%3Ahigh%3Aww%3AsourceVIKI%3Ampd%3Acached%3Adt2_dt3\u0026h_country=us\u0026token=undefined\u0026h_data_center=ore-2\u0026app=100000a\u0026h_request_id=14ae12a06273099fec3920510e7fe7cc%2F3431514253421220491\u0026dub_enabled=true\u0026sig=a7303905d083d67f6801e884e1620445b4fe953a","format":"mpd","cdn":"cloudfront","streamId":"133924808","multExpId":"","name":"main","skipMarkers":[{"label":"skip_intro","labelText":"Skip Intro","startTime":196,"endTime":291}
+
+"drm":"eyJkdDEiOiJodHRwczovL21hbmlmZXN0LXZpa2kudmlraS5pby92MS9saWNlbnNlP2FwcF92ZXI9MjYuMDYuMDMtMTUuMzYuMCZkdD1kdDEmdmlkZW9faWQ9MTIxMTQ3N3YmYXBwPTEwMDAwMGEmaF90aW1lc3RhbXA9MTc4MjI5MzQ2MyZzaWc9NTk4MGQzYTcyN2E0NTg3ODg4OTQ0YWRiNDg2ODlmZDVlZjZlYjcwNCIsImR0MiI6Imh0dHBzOi8vbWFuaWZlc3QtdmlraS52aWtpLmlvL3YxL2xpY2Vuc2U/YXBwX3Zlcj0yNi4wNi4wMy0xNS4zNi4wJmR0PWR0MiZ2aWRlb19pZD0xMjExNDc3diZhcHA9MTAwMDAwYSZoX3RpbWVzdGFtcD0xNzgyMjkzNDYzJnNpZz1mNjU3N2NkMzg1ZTBiZDU0NzQ1NjUyODJlNWUyZThlMGNjNTllMjYzIiwiZHQzIjoiaHR0cHM6Ly9tYW5pZmVzdC12aWtpLnZpa2kuaW8vdjEvbGljZW5zZT92aWRlb19pZD0xMjExNDc3diZhcHA9MTAwMDAwYSZoX3RpbWVzdGFtcD0xNzgyMjkzNDYzJmFwcF92ZXI9MjYuMDYuMDMtMTUuMzYuMCZkdD1kdDMmc2lnPThkNTg5M2MxNjk2YjBlNDNlZTQ4NGEzNWYyNjlkMmI3MzIzYjdkZWQiLCJmYWlycGxheV9jZXJ0aWZpY2F0ZSI6Ik1JSUV6VENDQTdXZ0F3SUJBZ0lJWGZDU1k0NG4vdWd3RFFZSktvWklodmNOQVFFRkJRQXdmekVMTUFrR0ExVUVCaE1DVlZNeEV6QVJCZ05WQkFvTUNrRndjR3hsSUVsdVl5NHhKakFrQmdOVkJBc01IVUZ3Y0d4bElFTmxjblJwWm1sallYUnBiMjRnUVhWMGFHOXlhWFI1TVRNd01RWURWUVFERENwQmNIQnNaU0JMWlhrZ1UyVnlkbWxqWlhNZ1EyVnlkR2xtYVdOaGRHbHZiaUJCZFhSb2IzSnBkSGt3SGhjTk1UZ3dOekExTURjd05qUTBXaGNOTWpBd056QTFNRGN3TmpRMFdqQm9NUXN3Q1FZRFZRUUdFd0pUUnpFWE1CVUdBMVVFQ2d3T2RtbHBhMmxwSUhCMFpTQnNkR1F4RXpBUkJnTlZCQXNNQ2xOT1ZUbE9NalJXV1ZjeEt6QXBCZ05WQkFNTUlrWmhhWEpRYkdGNUlGTjBjbVZoYldsdVp6b2dkbWxwYTJscElIQjBaU0JzZEdRd2daOHdEUVlKS29aSWh2Y05BUUVCQlFBRGdZMEFNSUdKQW9HQkFNcElFdS9CakR1dVM1dlJSWExZK0hsT05XOURiYnJiWk5SOG9MeklqaTV2OTFyeGRTK0V1SCtjTlZSbHI4Tk0yZmZNa2xBVTVWcytuYmdhdEh3dmwzaWpPd01mb0REbXEvK0RnTmxYKzhPZzJpdHpHNHlqT0JRUkF5UVBDNkVRbWpkVlQxVzlLSS9xMlpRcXRITjMvcVFsMXZxSklIcjRCNStBTVBNWXQ5a1BBZ01CQUFHamdnSG1NSUlCNGpBTUJnTlZIUk1CQWY4RUFqQUFNQjhHQTFVZEl3UVlNQmFBRkdQa1IxVExoWEZaUml5RHJNeEVNV1JuQXl5K01JSGlCZ05WSFNBRWdkb3dnZGN3Z2RRR0NTcUdTSWIzWTJRRkFUQ0J4akNCd3dZSUt3WUJCUVVIQWdJd2diWU1nYk5TWld4cFlXNWpaU0J2YmlCMGFHbHpJR05sY25ScFptbGpZWFJsSUdKNUlHRnVlU0J3WVhKMGVTQmhjM04xYldWeklHRmpZMlZ3ZEdGdVkyVWdiMllnZEdobElIUm9aVzRnWVhCd2JHbGpZV0pzWlNCemRHRnVaR0Z5WkNCMFpYSnRjeUJoYm1RZ1kyOXVaR2wwYVc5dWN5QnZaaUIxYzJVc0lHTmxjblJwWm1sallYUmxJSEJ2YkdsamVTQmhibVFnWTJWeWRHbG1hV05oZEdsdmJpQndjbUZqZEdsalpTQnpkR0YwWlcxbGJuUnpMakExQmdOVkhSOEVMakFzTUNxZ0tLQW1oaVJvZEhSd09pOHZZM0pzTG1Gd2NHeGxMbU52YlM5clpYbHpaWEoyYVdObGN5NWpjbXd3SFFZRFZSME9CQllFRkRacExpYndkWGp4ZjZ5ZlJjS1RGbmh0UXZXYk1BNEdBMVVkRHdFQi93UUVBd0lGSURBNkJnc3Foa2lHOTJOa0JnMEJBd0VCL3dRb0FXaHhZVzQwY214bU5tUnNNR0YzZFhCMWFHOXJibWN6TW00MWNEbG5iR3hqTkd4a1kzaG5jakFxQmdzcWhraUc5Mk5rQmcwQkJBRUIvd1FZQVd4M2Vtb3lkR1pvTkhwaU1IaHZjV3BrYUhabWRtZGxNQTBHQ1NxR1NJYjNEUUVCQlFVQUE0SUJBUURMMUlyRjBzcW5mbWVKcEhZNjNvMmc2NXArL0FwcU5SdmVPNitody9qMW9jVit4d3dXTGd5REM0bjEwUDZFZVB3Q2drWmdvOUVad2dpMW1wZWp4MUZ3ZU4xblpURmFrR2NCVWlPemJFekRBQkwzSnN2YmhsOVVuS0V5SlpBUnpiRzRYTjdTeCsrZkRnd2IrcXF5UTNUUUgxNm1NNkV5ek9vUUQvQjNkWmg2QW1EQmhYSjNYVlZkbHBDRVdxcitJUDFOb1REWjBvMHEwZzVXQktOMlQ5amlVcXd6Qkk3aW1IUm1uQTRyKzhTRkJwTC95bjJsTmxmYVk1SDhrMHdJS3ErbGtiWFFVbjBTNmtBWDJsempJcEYzNUpZL2lPRUFpMmhQbTRweGNnWVRib2ZRYVJ4eXRrenM2UUJIVHd4QXM3YWxVa3Y1Q2hsckxOQjc2NHJzWnhYdiJ9"
+
+from tag:
+=========
+
+<script id="__NEXT_DATA__" type="application/json" nonce=""></script>
+
+--------------------------------------------------------------------------------
+
+https://1.viki.io/a/vwk8s/_next/static/chunks/a00ab0f3-8e562f4ff344ad10.js
+
+interesting portions of code:
+=============================
+
+this.drmData = JSON.parse(atob(this.options.drm));
+
+getKeySystems() {
+    var e, t;
+    let i;
+    return i = xn("safari") || xn("ios") ? {
+        "com.apple.fps.1_0": {
+            getContentId: ()=>`entry-${this.entryId}`,
+            getCertificate: (e,t)=>{
+                const i = window.atob(this.drmData.fairplay_certificate)
+                  , n = i.length
+                  , a = new Uint8Array(new ArrayBuffer(n));
+                for (let r = 0; r < n; r++)
+                    a[r] = i.charCodeAt(r);
+                t(null, a)
+            }
+            ,
+            licenseUri: this.drmData.dt1
+        }
+    } : {
+        "com.widevine.alpha": {
+            licenseUri: null === (e = null == this ? void 0 : this.drmData) || void 0 === e ? void 0 : e.dt3,
+            audioContentType: 'audio/mp4; codecs="mp4a.40.2"',
+            videoContentType: 'video/mp4; codecs="avc1.640028"',
+            audioRobustness: "SW_SECURE_CRYPTO",
+            videoRobustness: "SW_SECURE_CRYPTO"
+        },
+        "com.microsoft.playready": {
+            licenseUri: null === (t = null == this ? void 0 : this.drmData) || void 0 === t ? void 0 : t.dt2,
+            audioContentType: 'audio/mp4; codecs="mp4a.40.2"',
+            videoContentType: 'video/mp4; codecs="avc1.640028"'
+        }
+    },
+    i
+}
+
+summary:
+========
+  * this.drmData.dt1
+    this.drmData.fairplay_certificate
+      used for: "com.apple.fps.1_0"
+  * this.drmData.dt2
+      used for: "com.microsoft.playready"
+  * this.drmData.dt3
+      used for: "com.widevine.alpha"
+
+--------------------------------------------------------------------------------
+
+JS console test 1:
+==================
+
+console.log(
+  "https://manifest-viki.viki.io/v1/1211477v/cloudfront/main/mpd/vtt/viki/high/sd/ww/dt2_dt3/manifest.mpd?h_host=playback-streams-687bf7b8b6-xkw97\u0026h_timestamp=1782293463\u0026tag=mpdhd%3Ahigh%3Aww%3AsourceVIKI%3Ampd%3Acached%3Adt2_dt3\u0026h_country=us\u0026token=undefined\u0026h_data_center=ore-2\u0026app=100000a\u0026h_request_id=14ae12a06273099fec3920510e7fe7cc%2F3431514253421220491\u0026dub_enabled=true\u0026sig=a7303905d083d67f6801e884e1620445b4fe953a"
+)
+
+output:
+=======
+
+https://manifest-viki.viki.io/v1/1211477v/cloudfront/main/mpd/vtt/viki/high/sd/ww/dt2_dt3/manifest.mpd?h_host=playback-streams-687bf7b8b6-xkw97&h_timestamp=1782293463&tag=mpdhd%3Ahigh%3Aww%3AsourceVIKI%3Ampd%3Acached%3Adt2_dt3&h_country=us&token=undefined&h_data_center=ore-2&app=100000a&h_request_id=14ae12a06273099fec3920510e7fe7cc%2F3431514253421220491&dub_enabled=true&sig=a7303905d083d67f6801e884e1620445b4fe953a
+
+--------------------------------------------------------------------------------
+
+JS console test 2:
+==================
+
+console.log(
+  JSON.stringify(
+    JSON.parse(
+      atob(
+        "eyJkdDEiOiJodHRwczovL21hbmlmZXN0LXZpa2kudmlraS5pby92MS9saWNlbnNlP2FwcF92ZXI9MjYuMDYuMDMtMTUuMzYuMCZkdD1kdDEmdmlkZW9faWQ9MTIxMTQ3N3YmYXBwPTEwMDAwMGEmaF90aW1lc3RhbXA9MTc4MjI5MzQ2MyZzaWc9NTk4MGQzYTcyN2E0NTg3ODg4OTQ0YWRiNDg2ODlmZDVlZjZlYjcwNCIsImR0MiI6Imh0dHBzOi8vbWFuaWZlc3QtdmlraS52aWtpLmlvL3YxL2xpY2Vuc2U/YXBwX3Zlcj0yNi4wNi4wMy0xNS4zNi4wJmR0PWR0MiZ2aWRlb19pZD0xMjExNDc3diZhcHA9MTAwMDAwYSZoX3RpbWVzdGFtcD0xNzgyMjkzNDYzJnNpZz1mNjU3N2NkMzg1ZTBiZDU0NzQ1NjUyODJlNWUyZThlMGNjNTllMjYzIiwiZHQzIjoiaHR0cHM6Ly9tYW5pZmVzdC12aWtpLnZpa2kuaW8vdjEvbGljZW5zZT92aWRlb19pZD0xMjExNDc3diZhcHA9MTAwMDAwYSZoX3RpbWVzdGFtcD0xNzgyMjkzNDYzJmFwcF92ZXI9MjYuMDYuMDMtMTUuMzYuMCZkdD1kdDMmc2lnPThkNTg5M2MxNjk2YjBlNDNlZTQ4NGEzNWYyNjlkMmI3MzIzYjdkZWQiLCJmYWlycGxheV9jZXJ0aWZpY2F0ZSI6Ik1JSUV6VENDQTdXZ0F3SUJBZ0lJWGZDU1k0NG4vdWd3RFFZSktvWklodmNOQVFFRkJRQXdmekVMTUFrR0ExVUVCaE1DVlZNeEV6QVJCZ05WQkFvTUNrRndjR3hsSUVsdVl5NHhKakFrQmdOVkJBc01IVUZ3Y0d4bElFTmxjblJwWm1sallYUnBiMjRnUVhWMGFHOXlhWFI1TVRNd01RWURWUVFERENwQmNIQnNaU0JMWlhrZ1UyVnlkbWxqWlhNZ1EyVnlkR2xtYVdOaGRHbHZiaUJCZFhSb2IzSnBkSGt3SGhjTk1UZ3dOekExTURjd05qUTBXaGNOTWpBd056QTFNRGN3TmpRMFdqQm9NUXN3Q1FZRFZRUUdFd0pUUnpFWE1CVUdBMVVFQ2d3T2RtbHBhMmxwSUhCMFpTQnNkR1F4RXpBUkJnTlZCQXNNQ2xOT1ZUbE9NalJXV1ZjeEt6QXBCZ05WQkFNTUlrWmhhWEpRYkdGNUlGTjBjbVZoYldsdVp6b2dkbWxwYTJscElIQjBaU0JzZEdRd2daOHdEUVlKS29aSWh2Y05BUUVCQlFBRGdZMEFNSUdKQW9HQkFNcElFdS9CakR1dVM1dlJSWExZK0hsT05XOURiYnJiWk5SOG9MeklqaTV2OTFyeGRTK0V1SCtjTlZSbHI4Tk0yZmZNa2xBVTVWcytuYmdhdEh3dmwzaWpPd01mb0REbXEvK0RnTmxYKzhPZzJpdHpHNHlqT0JRUkF5UVBDNkVRbWpkVlQxVzlLSS9xMlpRcXRITjMvcVFsMXZxSklIcjRCNStBTVBNWXQ5a1BBZ01CQUFHamdnSG1NSUlCNGpBTUJnTlZIUk1CQWY4RUFqQUFNQjhHQTFVZEl3UVlNQmFBRkdQa1IxVExoWEZaUml5RHJNeEVNV1JuQXl5K01JSGlCZ05WSFNBRWdkb3dnZGN3Z2RRR0NTcUdTSWIzWTJRRkFUQ0J4akNCd3dZSUt3WUJCUVVIQWdJd2diWU1nYk5TWld4cFlXNWpaU0J2YmlCMGFHbHpJR05sY25ScFptbGpZWFJsSUdKNUlHRnVlU0J3WVhKMGVTQmhjM04xYldWeklHRmpZMlZ3ZEdGdVkyVWdiMllnZEdobElIUm9aVzRnWVhCd2JHbGpZV0pzWlNCemRHRnVaR0Z5WkNCMFpYSnRjeUJoYm1RZ1kyOXVaR2wwYVc5dWN5QnZaaUIxYzJVc0lHTmxjblJwWm1sallYUmxJSEJ2YkdsamVTQmhibVFnWTJWeWRHbG1hV05oZEdsdmJpQndjbUZqZEdsalpTQnpkR0YwWlcxbGJuUnpMakExQmdOVkhSOEVMakFzTUNxZ0tLQW1oaVJvZEhSd09pOHZZM0pzTG1Gd2NHeGxMbU52YlM5clpYbHpaWEoyYVdObGN5NWpjbXd3SFFZRFZSME9CQllFRkRacExpYndkWGp4ZjZ5ZlJjS1RGbmh0UXZXYk1BNEdBMVVkRHdFQi93UUVBd0lGSURBNkJnc3Foa2lHOTJOa0JnMEJBd0VCL3dRb0FXaHhZVzQwY214bU5tUnNNR0YzZFhCMWFHOXJibWN6TW00MWNEbG5iR3hqTkd4a1kzaG5jakFxQmdzcWhraUc5Mk5rQmcwQkJBRUIvd1FZQVd4M2Vtb3lkR1pvTkhwaU1IaHZjV3BrYUhabWRtZGxNQTBHQ1NxR1NJYjNEUUVCQlFVQUE0SUJBUURMMUlyRjBzcW5mbWVKcEhZNjNvMmc2NXArL0FwcU5SdmVPNitody9qMW9jVit4d3dXTGd5REM0bjEwUDZFZVB3Q2drWmdvOUVad2dpMW1wZWp4MUZ3ZU4xblpURmFrR2NCVWlPemJFekRBQkwzSnN2YmhsOVVuS0V5SlpBUnpiRzRYTjdTeCsrZkRnd2IrcXF5UTNUUUgxNm1NNkV5ek9vUUQvQjNkWmg2QW1EQmhYSjNYVlZkbHBDRVdxcitJUDFOb1REWjBvMHEwZzVXQktOMlQ5amlVcXd6Qkk3aW1IUm1uQTRyKzhTRkJwTC95bjJsTmxmYVk1SDhrMHdJS3ErbGtiWFFVbjBTNmtBWDJsempJcEYzNUpZL2lPRUFpMmhQbTRweGNnWVRib2ZRYVJ4eXRrenM2UUJIVHd4QXM3YWxVa3Y1Q2hsckxOQjc2NHJzWnhYdiJ9"
+      )
+    ),
+    null, 4
+  )
+)
+
+output:
+=======
+
+{
+    "dt1": "https://manifest-viki.viki.io/v1/license?app_ver=26.06.03-15.36.0&dt=dt1&video_id=1211477v&app=100000a&h_timestamp=1782293463&sig=5980d3a727a4587888944adb48689fd5ef6eb704",
+    "dt2": "https://manifest-viki.viki.io/v1/license?app_ver=26.06.03-15.36.0&dt=dt2&video_id=1211477v&app=100000a&h_timestamp=1782293463&sig=f6577cd385e0bd5474565282e5e2e8e0cc59e263",
+    "dt3": "https://manifest-viki.viki.io/v1/license?video_id=1211477v&app=100000a&h_timestamp=1782293463&app_ver=26.06.03-15.36.0&dt=dt3&sig=8d5893c1696b0e43ee484a35f269d2b7323b7ded",
+    "fairplay_certificate": "MIIEzTCCA7WgAwIBAgIIXfCSY44n/ugwDQYJKoZIhvcNAQEFBQAwfzELMAkGA1UEBhMCVVMxEzARBgNVBAoMCkFwcGxlIEluYy4xJjAkBgNVBAsMHUFwcGxlIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MTMwMQYDVQQDDCpBcHBsZSBLZXkgU2VydmljZXMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTgwNzA1MDcwNjQ0WhcNMjAwNzA1MDcwNjQ0WjBoMQswCQYDVQQGEwJTRzEXMBUGA1UECgwOdmlpa2lpIHB0ZSBsdGQxEzARBgNVBAsMClNOVTlOMjRWWVcxKzApBgNVBAMMIkZhaXJQbGF5IFN0cmVhbWluZzogdmlpa2lpIHB0ZSBsdGQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMpIEu/BjDuuS5vRRXLY+HlONW9DbbrbZNR8oLzIji5v91rxdS+EuH+cNVRlr8NM2ffMklAU5Vs+nbgatHwvl3ijOwMfoDDmq/+DgNlX+8Og2itzG4yjOBQRAyQPC6EQmjdVT1W9KI/q2ZQqtHN3/qQl1vqJIHr4B5+AMPMYt9kPAgMBAAGjggHmMIIB4jAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFGPkR1TLhXFZRiyDrMxEMWRnAyy+MIHiBgNVHSAEgdowgdcwgdQGCSqGSIb3Y2QFATCBxjCBwwYIKwYBBQUHAgIwgbYMgbNSZWxpYW5jZSBvbiB0aGlzIGNlcnRpZmljYXRlIGJ5IGFueSBwYXJ0eSBhc3N1bWVzIGFjY2VwdGFuY2Ugb2YgdGhlIHRoZW4gYXBwbGljYWJsZSBzdGFuZGFyZCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiB1c2UsIGNlcnRpZmljYXRlIHBvbGljeSBhbmQgY2VydGlmaWNhdGlvbiBwcmFjdGljZSBzdGF0ZW1lbnRzLjA1BgNVHR8ELjAsMCqgKKAmhiRodHRwOi8vY3JsLmFwcGxlLmNvbS9rZXlzZXJ2aWNlcy5jcmwwHQYDVR0OBBYEFDZpLibwdXjxf6yfRcKTFnhtQvWbMA4GA1UdDwEB/wQEAwIFIDA6BgsqhkiG92NkBg0BAwEB/wQoAWhxYW40cmxmNmRsMGF3dXB1aG9rbmczMm41cDlnbGxjNGxkY3hncjAqBgsqhkiG92NkBg0BBAEB/wQYAWx3emoydGZoNHpiMHhvcWpkaHZmdmdlMA0GCSqGSIb3DQEBBQUAA4IBAQDL1IrF0sqnfmeJpHY63o2g65p+/ApqNRveO6+hw/j1ocV+xwwWLgyDC4n10P6EePwCgkZgo9EZwgi1mpejx1FweN1nZTFakGcBUiOzbEzDABL3Jsvbhl9UnKEyJZARzbG4XN7Sx++fDgwb+qqyQ3TQH16mM6EyzOoQD/B3dZh6AmDBhXJ3XVVdlpCEWqr+IP1NoTDZ0o0q0g5WBKN2T9jiUqwzBI7imHRmnA4r+8SFBpL/yn2lNlfaY5H8k0wIKq+lkbXQUn0S6kAX2lzjIpF35JY/iOEAi2hPm4pxcgYTbofQaRxytkzs6QBHTwxAs7alUkv5ChlrLNB764rsZxXv"
+}
+
+--------------------------------------------------------------------------------
+
+results:
+========
+
+https://manifest-viki.viki.io/v1/1211477v/cloudfront/main/mpd/vtt/viki/high/sd/ww/dt2_dt3/manifest.mpd?h_host=playback-streams-687bf7b8b6-xkw97&h_timestamp=1782293463&tag=mpdhd%3Ahigh%3Aww%3AsourceVIKI%3Ampd%3Acached%3Adt2_dt3&h_country=us&token=undefined&h_data_center=ore-2&app=100000a&h_request_id=14ae12a06273099fec3920510e7fe7cc%2F3431514253421220491&dub_enabled=true&sig=a7303905d083d67f6801e884e1620445b4fe953a
+  video URL
+
+https://manifest-viki.viki.io/v1/license?video_id=1211477v&app=100000a&h_timestamp=1782293463&app_ver=26.06.03-15.36.0&dt=dt3&sig=8d5893c1696b0e43ee484a35f269d2b7323b7ded
+  Widevine DRM license URL
+
+conclusions:
+============
+  * DRM protected video plays perfectly in ExoAirPlayer
+    - no request headers were required,
+      specifically: Referer, Cookie, Authorization
+    - no geo restrictions were encountered
+  * DASH stream includes text captions for multiple languages, including English
+
+--------------------------------------------------------------------------------
