@@ -1,0 +1,34 @@
+--------------------------------------------------------------------------------
+
+https://www.viki.com/tv/39255c-three-body#episodes
+  series: Three-Body
+
+observations:
+=============
+  * in a desktop browser, an individual episode can be opened:
+    - right click
+    - open in new tab
+  * in a mobile browser:
+    - right click isn't an available action
+  * left click or touch gesture on an episode:
+    - opens a modal dialog to login or subscribe
+
+fix:
+====
+{
+  document.addEventListener('click', function(event) {
+    console.log(event)
+
+    if (event.target.querySelector('i.icon-viki-play')) {
+      var $a = event.target.closest('a[href^="/videos/"]')
+      if (!$a) return
+
+      event.preventDefault()
+      event.stopPropagation()
+      event.stopImmediatePropagation()
+      window.location = $a.href
+    }
+  }, true)
+}
+
+--------------------------------------------------------------------------------

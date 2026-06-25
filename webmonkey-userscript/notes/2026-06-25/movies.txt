@@ -1,0 +1,53 @@
+--------------------------------------------------------------------------------
+
+https://www.viki.com/movies
+
+--------------------------------------------------------------------------------
+
+https://www.viki.com/movies/41439c-once-we-were-us
+  access: "Viki Pass"
+
+view-source:https://www.viki.com/movies/41439c-once-we-were-us
+  "watch_now":{"id":"1269437v","type":"movie","url":{"api":"https://api.viki.io/v4/videos/1269437v.json","web":"https://www.viki.com/videos/1269437v-once-we-were-us"},"duration":6885}
+
+https://www.viki.com/videos/1269437v-once-we-were-us
+  page DOM does not contain URLs (ie: video and DRM)
+
+--------------------------------------------------------------------------------
+
+https://www.viki.com/movies/37546c-josee
+  access: "Watch Free"
+
+observations:
+=============
+  * "Play" button is visible
+    - left click: opens a modal dialog to login or subscribe
+    - not wrapped in an anchor tag (ie: <a>).. so right click is not available
+
+fix:
+====
+{
+  document.addEventListener('click', function(event) {
+    console.log(event)
+
+    if (event.target.matches('i.icon-play') || (event.target.matches('button') && event.target.querySelector(':scope > i.icon-play'))) {
+      var script = document.querySelector('script#__NEXT_DATA__[type="application/json"]').textContent
+      var url_regex = new RegExp('"web":"(https://www\\.viki\\.com/videos/[^"]+)"')
+      var match = url_regex.exec(script)
+      if (!match) return
+
+      event.preventDefault()
+      event.stopPropagation()
+      event.stopImmediatePropagation()
+      window.location = JSON.parse('"' + match[1] + '"')
+    }
+  }, true)
+}
+
+result:
+=======
+  * redirects to page with video player for full movie
+  * userscript successfully extracts URLs (ie: video and DRM) from page DOM
+  * redirects to external video player
+
+--------------------------------------------------------------------------------

@@ -1,8 +1,10 @@
 // ==UserScript==
 // @name         Rakuten Viki
 // @description  Watch videos in external player.
-// @version      1.0.0
+// @version      1.1.0
 // @match        *://*.viki.com/videos/*
+// @match        *://*.viki.com/tv/*
+// @match        *://*.viki.com/movies/*
 // @icon         https://www.viki.com/favicon.ico
 // @run-at       document-end
 // @grant        unsafeWindow
@@ -314,10 +316,43 @@ var inspect_video_dom_scripts = function() {
 // -------------------------------------
 
 var init = function() {
-  var video = inspect_video_dom_scripts()
+  var pathname = unsafeWindow.location.pathname
+  var video
 
-  if (video)
-    process_video_data(video)
+  if (pathname.indexOf('/videos/') === 0) {
+    video = inspect_video_dom_scripts()
+
+    if (video)
+      process_video_data(video)
+  }
+  else if (pathname.indexOf('/tv/') === 0) {
+    unsafeWindow.document.addEventListener('click', function(event) {
+      if (event.target.querySelector('i.icon-viki-play')) {
+        var $a = event.target.closest('a[href^="/videos/"]')
+        if (!$a) return
+
+        event.preventDefault()
+        event.stopPropagation()
+        event.stopImmediatePropagation()
+        unsafeWindow.location = $a.href
+      }
+    }, true)
+  }
+  else if (pathname.indexOf('/movies/') === 0) {
+    unsafeWindow.document.addEventListener('click', function(event) {
+      if (event.target.matches('i.icon-play') || (event.target.matches('button') && event.target.querySelector(':scope > i.icon-play'))) {
+        var script = unsafeWindow.document.querySelector('script#__NEXT_DATA__[type="application/json"]').textContent
+        var url_regex = new RegExp('"web":"(https://www\\.viki\\.com/videos/[^"]+)"')
+        var match = url_regex.exec(script)
+        if (!match) return
+
+        event.preventDefault()
+        event.stopPropagation()
+        event.stopImmediatePropagation()
+        unsafeWindow.location = JSON.parse('"' + match[1] + '"')
+      }
+    }, true)
+  }
 }
 
 init()
