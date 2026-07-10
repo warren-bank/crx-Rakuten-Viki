@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rakuten Viki
 // @description  Watch videos in external player.
-// @version      1.1.0
+// @version      1.2.0
 // @match        *://*.viki.com/videos/*
 // @match        *://*.viki.com/tv/*
 // @match        *://*.viki.com/movies/*
@@ -21,6 +21,13 @@
 // ----------------------------------------------------------------------------- constants
 
 var user_options = {
+  "common": {
+    "rewrite_tv_pages":          true,
+    "rewrite_tv_pages_delay_ms": 2500
+  },
+  "developer": {
+    "debug": true
+  },
   "webmonkey": {
     "post_intent_redirect_to_url":  "about:blank"
   },
@@ -29,6 +36,113 @@ var user_options = {
     "force_http":                   true,
     "force_https":                  false
   }
+}
+
+// ----------------------------------------------------------------------------- helpers (xhr)
+
+var serialize_xhr_body_object = function(data) {
+  if (typeof data === 'string')
+    return data
+
+  if (!(data instanceof Object))
+    return null
+
+  var body = []
+  var keys = Object.keys(data)
+  var key, val
+  for (var i=0; i < keys.length; i++) {
+    key = keys[i]
+    val = data[key]
+    val = encodeURIComponent(val)
+
+    body.push(key + '=' + val)
+  }
+  body = body.join('&')
+  return body
+}
+
+var download_text = function(url, headers, data, callback) {
+  if (data) {
+    if (!headers)
+      headers = {}
+    if (!headers['content-type'])
+      headers['content-type'] = 'application/x-www-form-urlencoded'
+
+    switch(headers['content-type'].toLowerCase()) {
+      case 'application/json':
+        data = JSON.stringify(data)
+        break
+
+      case 'application/x-www-form-urlencoded':
+      default:
+        data = serialize_xhr_body_object(data)
+        break
+    }
+  }
+
+  var xhr    = new unsafeWindow.XMLHttpRequest()
+  var method = data ? 'POST' : 'GET'
+
+  xhr.open(method, url, true, null, null)
+
+  if (headers && (typeof headers === 'object')) {
+    var keys = Object.keys(headers)
+    var key, val
+    for (var i=0; i < keys.length; i++) {
+      key = keys[i]
+      val = headers[key]
+      xhr.setRequestHeader(key, val)
+    }
+  }
+
+  xhr.onload = function(e) {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        callback(null, xhr.responseText)
+      }
+    }
+  }
+
+  xhr.onerror = function(error) {
+    callback(error)
+  }
+
+  if (data)
+    xhr.send(data)
+  else
+    xhr.send()
+}
+
+var download_json = function(url, headers, data, callback) {
+  if (!headers)
+    headers = {}
+  if (!headers.accept)
+    headers.accept = 'application/json'
+
+  download_text(url, headers, data, function(error, text){
+    if (error) {
+      callback(error)
+    }
+    else {
+      try {
+        callback(null, JSON.parse(text))
+      }
+      catch(e) {
+        callback(e)
+      }
+    }
+  })
+}
+
+// ----------------------------------------------------------------------------- API
+
+var download_tv_episodes = function(series_id, callback) {
+  var api_url = 'https://api.viki.io/v4/containers/' + series_id + '/episodes.json?token=undefined&direction=asc&with_upcoming=true&sort=number&blocked=true&only_ids=true&app=100000a'
+
+  download_json(api_url, null, null, function(error, api_data) {
+    if (!error && api_data && (typeof api_data === 'object') && Array.isArray(api_data.response) && api_data.response.length)
+      callback(api_data.response)
+  })
 }
 
 // ----------------------------------------------------------------------------- URL links to tools on Webcast Reloaded website
@@ -313,7 +427,55 @@ var inspect_video_dom_scripts = function() {
   return video
 }
 
-// -------------------------------------
+// ----------------------------------------------------------------------------- rewrite tv page
+
+var rewrite_tv_page = function(pathname) {
+  var series_regex = /^\/tv\/([^-]+)(?:-.*)?$/
+  var match        = series_regex.exec(pathname)
+  if (!match) return
+
+  var series_id = match[1]
+
+  download_tv_episodes(series_id, function(episode_ids) {
+    unsafeWindow.document.close()
+    unsafeWindow.document.write('')
+    unsafeWindow.document.close()
+
+    var head = unsafeWindow.document.getElementsByTagName('head')[0]
+    var body = unsafeWindow.document.body
+
+    var html = {
+      "head": [
+        '<style>',
+        'body > * {',
+        '  display: none !important;',
+        '}',
+        'body > ul {',
+        '  display: block !important;',
+        '}',
+        'body > ul > li {',
+        '  line-height: 1.5em;',
+        '}',
+        'body > ul > li > a {',
+        '  text-decoration: none;',
+        '}',
+        '</style>'
+      ],
+      "body": []
+    }
+
+    html.body.push('<ul>')
+    for (var i=0; i < episode_ids.length; i++) {
+      html.body.push('<li><a target="_blank" href="/videos/' + episode_ids[i] + '">episode ' + (i+1) + '</a></li>')
+    }
+    html.body.push('</ul>')
+
+    head.innerHTML = '' + html.head.join("\n")
+    body.innerHTML = '' + html.body.join("\n")
+  })
+}
+
+// ----------------------------------------------------------------------------- bootstrap
 
 var init = function() {
   var pathname = unsafeWindow.location.pathname
@@ -326,17 +488,24 @@ var init = function() {
       process_video_data(video)
   }
   else if (pathname.indexOf('/tv/') === 0) {
-    unsafeWindow.document.addEventListener('click', function(event) {
-      if (event.target.querySelector('i.icon-viki-play')) {
-        var $a = event.target.closest('a[href^="/videos/"]')
-        if (!$a) return
+    if (user_options.common.rewrite_tv_pages) {
+      unsafeWindow.setTimeout(function() {
+        rewrite_tv_page(pathname)
+      }, (user_options.common.rewrite_tv_pages_delay_ms || 0))
+    }
+    else {
+      unsafeWindow.document.addEventListener('click', function(event) {
+        if (event.target.querySelector('i.icon-viki-play')) {
+          var $a = event.target.closest('a[href^="/videos/"]')
+          if (!$a) return
 
-        event.preventDefault()
-        event.stopPropagation()
-        event.stopImmediatePropagation()
-        unsafeWindow.location = $a.href
-      }
-    }, true)
+          event.preventDefault()
+          event.stopPropagation()
+          event.stopImmediatePropagation()
+          unsafeWindow.location = $a.href
+        }
+      }, true)
+    }
   }
   else if (pathname.indexOf('/movies/') === 0) {
     unsafeWindow.document.addEventListener('click', function(event) {
@@ -354,5 +523,8 @@ var init = function() {
     }, true)
   }
 }
+
+if (user_options.developer.debug)
+  debugger;
 
 init()

@@ -1,0 +1,25 @@
+--------------------------------------------------------------------------------
+
+https://www.viki.com/tv/39255c-three-body#episodes
+  series: Three-Body
+
+--------------------------------------------------------------------------------
+
+API request:
+============
+https://api.viki.io/v4/containers/39255c/episodes.json?token=undefined&direction=asc&with_upcoming=true&sort=number&blocked=true&only_ids=true&app=100000a
+
+API response:
+=============
+{
+  "more": false,
+  "response": ["1211477v", "1211478v", "1211479v", "1211480v", "1211481v", "1211482v", "1211483v", "1211484v", "1211485v", "1211486v", "1211487v", "1211488v", "1211489v", "1211490v", "1211491v", "1211492v", "1211493v", "1211494v", "1211495v", "1211496v", "1211497v", "1211498v", "1211499v", "1211500v", "1211501v", "1211502v", "1211503v", "1211504v", "1211505v", "1211506v"]
+}
+
+notes:
+======
+  * the request only requires the ID of the TV series,
+    which can be extracted from the page URL
+  * the response is a list of all episodes in the TV series
+
+--------------------------------------------------------------------------------
