@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rakuten Viki
 // @description  Watch videos in external player.
-// @version      1.2.0
+// @version      1.2.1
 // @match        *://*.viki.com/videos/*
 // @match        *://*.viki.com/tv/*
 // @match        *://*.viki.com/movies/*
@@ -438,7 +438,8 @@ var rewrite_tv_page = function(pathname) {
 
   download_tv_episodes(series_id, function(episode_ids) {
     unsafeWindow.document.close()
-    unsafeWindow.document.write('')
+    unsafeWindow.document.open()
+    unsafeWindow.document.write('<!DOCTYPE html><html><head></head><body></body></html>')
     unsafeWindow.document.close()
 
     var head = unsafeWindow.document.getElementsByTagName('head')[0]
